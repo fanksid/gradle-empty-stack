@@ -9,6 +9,11 @@ public class Android extends Mobile {
 
     @Override
     protected String generateMessage(String message) {
+        if (isMessageOverLimit(message)) {
+            return "<Android> " + super.generateCannotSendMessage();
+        }
         return "<Android>" + super.generateMessage(message);
     }
+
+
 }

@@ -35,7 +35,9 @@ public class Mobile {
     }
 
     boolean isMessageOverLimit(String message) {
-        return Objects.nonNull(messageLimit) && Objects.nonNull(message) && message.length() > messageLimit;
+        return Objects.nonNull(messageLimit)
+                && Objects.nonNull(message)
+                && message.length() > messageLimit;
     }
 
     String generateCannotSendMessage() {
