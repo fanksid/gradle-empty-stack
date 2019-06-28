@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 class Person {
     private String name;
 
@@ -11,5 +13,13 @@ class Person {
 
     void call(String message) {
         mobile.call(message);
+    }
+
+    void changeMobile(Mobile mobile) {
+        if (Objects.isNull(mobile)) {
+            return;
+        }
+
+        this.mobile = mobile;
     }
 }

@@ -55,4 +55,15 @@ public class PersonMobileTest {
 
         Assert.assertEquals("<iPhone>Message : Message\n", systemOut());
     }
+
+    @Test
+    public void should_output_related_message_when_person_change_mobile_to_iphone() {
+        Mobile mobile = new Mobile();
+        Person person = new Person("Person Name", mobile);
+
+        person.changeMobile(new Iphone());
+        person.call("Message");
+
+        Assert.assertEquals("<iPhone>Message : Message\n", systemOut());
+    }
 }
